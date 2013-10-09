@@ -1,0 +1,100 @@
+CheckList:
+	A. Basic Software
+		a. XCode
+		b. XCode Command Line Tool
+		c. Textmate
+		d. OSX Server
+		e. OSX Server Tools
+		f. MySQL Server
+		g. PHPMyAdmin - English Zip!
+	B. Apache 2 Config
+	C. MySQL Config
+	D. PHPMyADmin Config
+	E. PHP Config
+	F. Server Deployment
+
+Step A: Install all softwares
+Step B: ping Web address make sure it's set up correctly for system preference network
+Step C: config profile.txt to .profile and vim.txt to .vimrc
+Step D: edit /etc/apache2/httpd.conf
+Step E: edit /etc/apache2/sites/0000_any_80_.conf and /etc/apache2/sites/0000_any_443_forumify.apple.com.conf (**Might need to edit pointed directory in shadow 443.conf)
+Step F: set up /Server/www with index.php hello world(**remember file ownership for www and phpmyadmin)
+Step G: put phpMyAdmin zip as /usr/local/phpmyadmin (**remember ownership and rename)
+Step H: /usr/local/phpMyAdmin/config.inc.php
+Step I: /etc/php.ini
+Step J: Change root user password and create pma and host % for both user.
+Step Z: Data dump phpmyadmin.sql using myphpadmin import
+
+
+Jacob's command Histrory:
+Step B:
+   20  ping forumify.apple.com
+   21  ping forumify.apple.com
+   22  clear
+Step C:
+   23  vim .profile
+   24  source .profile 
+   25  mysql -u root -p
+   26  clear
+   27  cd /etc/
+   28  cd apache2/
+   29  ls
+   30  cd
+   31  vim .vimrc
+   32  vim .vimrc
+   33  cd -
+Step D:
+   34  sudo vim httpd.conf
+   35  pwd
+   36  sudo vim httpd.conf
+   37  sudo apachectl restart
+Step E:
+   38  cd sites
+   39  ls
+   40  sudo vim 0000_any_80_.conf
+   41  sudo apachectl restart
+   42  ls
+   43  sudo vim 0000_any_443_forumify.apple.com.conf 
+   44  sudo apachectl restart
+   45  sudo vim 0000_any_80_.conf
+   46  sudo apachectl restart
+   47  sudo vim 0000_any_80_.conf
+   48  sidp vim 0000_any_443_forumify.apple.com.conf 
+   49  sudo vim 0000_any_443_forumify.apple.com.conf 
+   50  sudo apachectl restart
+Step F:
+   51  cd /Server/www
+   52  touch index.html
+   53  echo "Hello World" > index.html 
+Step G:
+   54  cd /usr/local/
+   55  ls
+   56  cd ~/Desktop/phpMyAdmin-4.0.5-english/ phpmyadmin
+   57  cd -
+   58  mv ~/Desktop/phpMyAdmin-4.0.5-english/ phpmyadmin
+   59  sudo mv ~/Desktop/phpMyAdmin-4.0.5-english/ phpmyadmin
+   60  ls
+   61  ls -l
+   62  sudo chwon -R root:wheel phpmyadmin/
+   63  sudo chown -R root:wheel phpmyadmin/
+   64  ls -l
+   65  cd phpmyadmin/
+   66  ;s
+   67  clear
+Step H:
+   87  sudo vim config.inc.php 
+   88  cd /etc/apache2/
+   89  sudo vim httpd.conf
+   90  sudo apachectl restart
+   91  mysql -u root 
+   92  ls
+   93  cd /usr/local/phpmyadmin/
+   94  sudo vim config.inc.php 
+Step I:
+   95  cd /etc
+   96  sudo vim php.ini
+   97  sudo apachectl restart
+Step J: 
+   98  http://www.cyberciti.biz/faq/mysql-change-root-password/
+
+	 
